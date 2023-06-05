@@ -5,6 +5,7 @@ import {
   Categories,
   NewsLetter,
   Footer,
+  Products,
 } from "../components";
 import { StatusBar } from "expo-status-bar";
 
@@ -15,6 +16,7 @@ const Home = () => {
         <NavBar />
         <CarouselSection />
         <Categories />
+        <Products />
         <NewsLetter />
         <Footer />
       </ScrollView>

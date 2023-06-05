@@ -1,8 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
-import Products from "./Products";
+import CategoryProducts from "./CategoryProducts";
 import { useFonts } from "expo-font";
+import { SafeAreaView } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,7 @@ const Routes = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen
           name="Products"
-          component={Products}
+          component={CategoryProducts}
           initialParams={{ category: null }}
         />
       </Stack.Navigator>

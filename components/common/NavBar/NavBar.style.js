@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 15,
     paddingHorizontal: 10,
+    borderBottomWidth: 0.5,
+    borderBottomColor: "grey",
   },
   logoText: {
     fontFamily: FONT.bold,
