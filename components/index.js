@@ -5,6 +5,7 @@ import Footer from "./common/Footer/Footer";
 import NewsLetter from "./common/NewsLetter/NewsLetter";
 import Products from "./Products/Products";
 import CategoryTitle from "./common/CategoryTitle/CategoryTitle";
+import CartItems from "./CartItem/CartItem";
 
 export {
   NavBar,
@@ -14,4 +15,5 @@ export {
   NewsLetter,
   Products,
   CategoryTitle,
+  CartItems,
 };

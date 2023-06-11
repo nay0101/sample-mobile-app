@@ -8,10 +8,11 @@ import {
   Products,
 } from "../components";
 import { StatusBar } from "expo-status-bar";
+import main from "../styles/main";
 
 const Home = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={main.safeAreaView}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <CarouselSection />

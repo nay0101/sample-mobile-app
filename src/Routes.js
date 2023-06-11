@@ -3,7 +3,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
 import CategoryProducts from "./CategoryProducts";
 import { useFonts } from "expo-font";
-import { SafeAreaView } from "react-native";
+import Product from "./Product";
+import Checkout from "./Checkout";
+import Cart from "./Cart";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +32,13 @@ const Routes = () => {
           component={CategoryProducts}
           initialParams={{ category: null }}
         />
+        <Stack.Screen
+          name="Product"
+          component={Product}
+          initialParams={{ productID: null }}
+        />
+        <Stack.Screen name="Cart" component={Cart} />
+        <Stack.Screen name="Checkout" component={Checkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );

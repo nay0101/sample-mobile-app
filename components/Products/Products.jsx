@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import { publicRequest } from "../../request-methods";
-import {
-  FlatList,
-  SafeAreaView,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { View } from "react-native";
 import styles from "./Products.style";
 import ProductCard from "../common/ProductCard/ProductCard";
+import main from "../../styles/main";
 
 const Products = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -29,7 +23,7 @@ const Products = ({ category }) => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={[main.container, styles.container]}>
       {products.map((product) => (
         <ProductCard key={product._id} image={product.image} id={product._id} />
       ))}

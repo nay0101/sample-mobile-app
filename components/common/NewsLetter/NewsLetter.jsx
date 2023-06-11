@@ -1,10 +1,11 @@
 import { View, Text, TextInput } from "react-native";
 import styles from "./NewsLetter.style";
 import { Icon } from "@rneui/base";
+import main from "../../../styles/main";
 
 const NewsLetter = () => {
   return (
-    <View style={styles.container}>
+    <View style={[main.container, styles.container]}>
       <Text style={styles.title}>Newsletter</Text>
       <Text style={styles.description}>
         Get timely updates from your favorite products

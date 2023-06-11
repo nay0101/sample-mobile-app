@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 const CategoryCard = ({ name, image }) => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <View style={[styles.container]}>
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.mask}></View>
       <View style={styles.shopText}>

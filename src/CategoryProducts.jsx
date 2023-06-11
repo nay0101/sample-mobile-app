@@ -6,11 +6,12 @@ import {
   NewsLetter,
   Products,
 } from "../components";
+import main from "../styles/main";
 
 const CategoryProducts = ({ route }) => {
   const { category } = route.params;
   return (
-    <SafeAreaView>
+    <SafeAreaView style={main.safeAreaView}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <CategoryTitle title={category} />

@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
-import { FONT } from "../../../constants";
+import { COLORS, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    paddingHorizontal: 10,
     paddingVertical: 40,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.gray,
   },
   section: {
-    marginBottom: 50,
+    marginBottom: 40,
   },
   footerTitle: {
     fontFamily: FONT.bold,

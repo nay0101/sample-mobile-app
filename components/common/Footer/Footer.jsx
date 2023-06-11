@@ -1,10 +1,11 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import styles from "./Footer.style";
 import { Icon } from "@rneui/base";
+import main from "../../../styles/main";
 
 const Footer = () => {
   return (
-    <View style={styles.container}>
+    <View style={[main.container, styles.container]}>
       <View style={styles.section}>
         <Text style={styles.footerTitle}>SECO</Text>
         <Text style={styles.footerDescription}>
