@@ -1,7 +1,5 @@
-import { Dimensions, Platform, StyleSheet, NativeModules } from "react-native";
-import { COLORS, FONT } from "../constants";
+import { Platform, StyleSheet, NativeModules } from "react-native";
 
-const { width } = Dimensions.get("window");
 const { StatusBarManager } = NativeModules;
 
 const main = StyleSheet.create({
