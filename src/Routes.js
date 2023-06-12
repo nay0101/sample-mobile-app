@@ -6,10 +6,15 @@ import { useFonts } from "expo-font";
 import Product from "./Product";
 import Checkout from "./Checkout";
 import Cart from "./Cart";
+import Orders from "./Orders";
+import Login from "./Login";
+import Register from "./Register";
+import { useSelector } from "react-redux";
 
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
+  const user = useSelector((store) => store.auth.currentUser);
   const [fontsLoaded] = useFonts({
     UrbanistBold: require("../assets/fonts/Urbanist-Bold.ttf"),
     UrbanistItalic: require("../assets/fonts/Urbanist-Italic.ttf"),
@@ -39,6 +44,9 @@ const Routes = () => {
         />
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="Checkout" component={Checkout} />
+        <Stack.Screen name="Orders" component={Orders} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );

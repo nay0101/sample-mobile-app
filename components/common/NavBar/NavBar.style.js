@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { FONT } from "../../../constants";
+import { COLORS, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,13 +9,37 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: "grey",
   },
+  logo: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   logoText: {
     fontFamily: FONT.bold,
     fontSize: 20,
   },
   menuButtons: {
     flexDirection: "row",
+    alignItems: "center",
     gap: 10,
+  },
+  badge: {
+    position: "absolute",
+    top: -5,
+    right: -5,
+    backgroundColor: COLORS.primary,
+  },
+  menu: {
+    backgroundColor: "#fff",
+  },
+  menuItem: {
+    backgroundColor: "#fff",
+  },
+  menuText: {
+    fontFamily: FONT.regular,
+    textTransform: "uppercase",
+  },
+  username: {
+    color: COLORS.primary,
   },
 });
 

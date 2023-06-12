@@ -40,7 +40,7 @@ const Product = ({ route, navigation }) => {
 
   const addToCartHandler = () => {
     dispatch(addProduct({ product, size, quantity }));
-    // navigation.navigate("Checkout");
+    navigation.navigate("Cart");
   };
 
   useEffect(() => {
@@ -105,11 +105,19 @@ const Product = ({ route, navigation }) => {
                 styles.addToCartButton,
               ]}
             >
-              <Text style={styles.addToCartText}>Add to Cart</Text>
+              {({ pressed }) => (
+                <Text
+                  style={[
+                    styles.addToCartText,
+                    pressed ? styles.addToCartText_after : "",
+                  ]}
+                >
+                  Add to Cart
+                </Text>
+              )}
             </Pressable>
           </View>
         </View>
-        <NewsLetter />
         <Footer />
       </ScrollView>
     </SafeAreaView>
@@ -198,6 +206,9 @@ const styles = StyleSheet.create({
   addToCartText: {
     fontFamily: FONT.regular,
     textTransform: "uppercase",
+  },
+  addToCartText_after: {
+    color: "#fff",
   },
 });
 

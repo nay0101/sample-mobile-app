@@ -17,6 +17,7 @@ export const login = (user) => {
       dispatch(loginSuccess(response.data));
     } catch (err) {
       dispatch(loginFailure());
+      console.log(err);
     }
   };
 };
@@ -29,6 +30,7 @@ export const register = (user) => {
       dispatch(registerSuccess(response.data));
     } catch (err) {
       dispatch(registerFailure);
+      console.log(err);
     }
   };
 };

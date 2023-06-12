@@ -9,15 +9,18 @@ import {
 import main from "../styles/main";
 import { CartItems, Footer, NavBar } from "../components";
 import { useDispatch, useSelector } from "react-redux";
-import { FONT } from "../constants";
+import { COLORS, FONT } from "../constants";
 import { removeAllProducts } from "../store/cart-slice";
 
 const Cart = ({ navigation }) => {
   const dispatch = useDispatch();
   const cart = useSelector((store) => store.cart);
+  const user = useSelector((store) => store.auth.currentUser);
+
   const removeProducts = () => {
     dispatch(removeAllProducts());
   };
+
   return (
     <SafeAreaView style={main.safeAreaView}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -30,7 +33,7 @@ const Cart = ({ navigation }) => {
                 styles.button,
                 pressed ? styles.button_after : styles.button_before,
               ]}
-              onPress={() => console.log(cart)}
+              onPress={() => navigation.navigate("Home")}
             >
               {({ pressed }) => (
                 <Text
@@ -101,7 +104,9 @@ const Cart = ({ navigation }) => {
               style={({ pressed }) => [
                 styles.button,
                 pressed ? styles.button_after : styles.button_before,
+                cart.totalPrice <= 0 || !user ? styles.button_disabled : "",
               ]}
+              disabled={cart.totalPrice <= 0 || !user}
               onPress={() => navigation.navigate("Checkout")}
             >
               {({ pressed }) => (
@@ -111,6 +116,9 @@ const Cart = ({ navigation }) => {
                     pressed
                       ? styles.buttonText_after
                       : styles.buttonText_before,
+                    cart.totalPrice <= 0 || !user
+                      ? styles.buttonText_disabled
+                      : "",
                   ]}
                 >
                   Check Out Now
@@ -149,6 +157,10 @@ const styles = StyleSheet.create({
   },
   button_after: {
     backgroundColor: "#000",
+  },
+  button_disabled: {
+    backgroundColor: COLORS.gray,
+    borderColor: COLORS.gray,
   },
   buttonText: {
     fontFamily: FONT.regular,
@@ -206,6 +218,9 @@ const styles = StyleSheet.create({
   },
   buttonTextDanger_after: {
     color: "#ef4444",
+  },
+  buttonText_disabled: {
+    color: "#fff",
   },
 });
 

@@ -16,7 +16,6 @@ const CategoryProducts = ({ route }) => {
         <NavBar />
         <CategoryTitle title={category} />
         <Products category={category} />
-        <NewsLetter />
         <Footer />
       </ScrollView>
     </SafeAreaView>

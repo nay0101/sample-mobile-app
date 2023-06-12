@@ -1,4 +1,4 @@
-import { Text, View, SafeAreaView, ScrollView } from "react-native";
+import { SafeAreaView, ScrollView } from "react-native";
 import {
   NavBar,
   CarouselSection,
@@ -7,7 +7,6 @@ import {
   Footer,
   Products,
 } from "../components";
-import { StatusBar } from "expo-status-bar";
 import main from "../styles/main";
 
 const Home = () => {

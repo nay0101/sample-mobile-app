@@ -6,6 +6,7 @@ import NewsLetter from "./common/NewsLetter/NewsLetter";
 import Products from "./Products/Products";
 import CategoryTitle from "./common/CategoryTitle/CategoryTitle";
 import CartItems from "./CartItem/CartItem";
+import OrderCard from "./OrderCard/OrderCard";
 
 export {
   NavBar,
@@ -16,4 +17,5 @@ export {
   Products,
   CategoryTitle,
   CartItems,
+  OrderCard,
 };
