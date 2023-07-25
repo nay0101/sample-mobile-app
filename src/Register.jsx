@@ -2,12 +2,12 @@ import {
   Dimensions,
   ImageBackground,
   Pressable,
-  SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import main from "../styles/main";
 import { useState } from "react";
 import { COLORS, FONT } from "../constants";

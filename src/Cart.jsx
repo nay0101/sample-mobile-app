@@ -1,11 +1,5 @@
-import {
-  Pressable,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-} from "react-native";
+import { Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import main from "../styles/main";
 import { CartItems, Footer, NavBar } from "../components";
 import { useDispatch, useSelector } from "react-redux";

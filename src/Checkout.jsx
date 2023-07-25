@@ -1,12 +1,5 @@
-import {
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-  Button,
-  Dimensions,
-  Pressable,
-} from "react-native";
+import { Text, View, StyleSheet, Dimensions, Pressable } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { userRequest } from "../request-methods";
 import { useEffect, useState } from "react";
 import {

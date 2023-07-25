@@ -2,7 +2,6 @@ import {
   Dimensions,
   ImageBackground,
   Pressable,
-  SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
@@ -13,6 +12,7 @@ import { useState } from "react";
 import { COLORS, FONT } from "../constants";
 import { login } from "../store/auth-actions";
 import { useDispatch } from "react-redux";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const { height, width } = Dimensions.get("window");
 

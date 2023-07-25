@@ -1,11 +1,6 @@
-import { SafeAreaView, ScrollView, Text, View } from "react-native";
-import {
-  CategoryTitle,
-  Footer,
-  NavBar,
-  NewsLetter,
-  Products,
-} from "../components";
+import { ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { CategoryTitle, Footer, NavBar, Products } from "../components";
 import main from "../styles/main";
 
 const CategoryProducts = ({ route }) => {

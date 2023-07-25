@@ -1,5 +1,4 @@
 import {
-  SafeAreaView,
   ScrollView,
   View,
   Image,
@@ -8,6 +7,7 @@ import {
   StyleSheet,
   Dimensions,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import SelectDropdown from "react-native-select-dropdown";
 import { Footer, NavBar, NewsLetter } from "../components";
 import { publicRequest } from "../request-methods";

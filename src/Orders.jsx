@@ -1,6 +1,7 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import main from "../styles/main";
-import { Footer, NavBar, NewsLetter, OrderCard } from "../components";
+import { Footer, NavBar, OrderCard } from "../components";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { userRequest } from "../request-methods";
