@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontFamily: FONT.regular,
+    color: "#000",
     textTransform: "uppercase",
   },
   username: {

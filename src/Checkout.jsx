@@ -1,4 +1,11 @@
-import { Text, View, StyleSheet, Dimensions, Pressable } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Dimensions,
+  Pressable,
+  StatusBar,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { userRequest } from "../request-methods";
 import { useEffect, useState } from "react";
@@ -95,6 +102,7 @@ const Checkout = ({ navigation }) => {
 
   return (
     <SafeAreaView style={[main.safeAreaView, styles.container]}>
+      <StatusBar />
       <Icon
         type="materialicons"
         name="arrow-back-ios"

@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, StatusBar } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import main from "../styles/main";
 import { Footer, NavBar, OrderCard } from "../components";
@@ -27,6 +27,7 @@ const Orders = () => {
 
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <View style={main.container}>

@@ -1,6 +1,4 @@
-import { Platform, StyleSheet, NativeModules } from "react-native";
-
-const { StatusBarManager } = NativeModules;
+import { StyleSheet } from "react-native";
 
 const main = StyleSheet.create({
   safeAreaView: {

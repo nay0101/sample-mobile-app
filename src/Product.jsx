@@ -6,10 +6,11 @@ import {
   Pressable,
   StyleSheet,
   Dimensions,
+  StatusBar,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SelectDropdown from "react-native-select-dropdown";
-import { Footer, NavBar, NewsLetter } from "../components";
+import { Footer, NavBar } from "../components";
 import { publicRequest } from "../request-methods";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
@@ -49,6 +50,7 @@ const Product = ({ route, navigation }) => {
 
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <View style={main.container}>

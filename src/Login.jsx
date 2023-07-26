@@ -2,6 +2,7 @@ import {
   Dimensions,
   ImageBackground,
   Pressable,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -20,19 +21,21 @@ const Login = ({ navigation }) => {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const formSubmitHandler = () => {
+  const formSubmitHandler = async () => {
     dispatch(
       login({
         username,
         password,
       })
-    );
-    setUsername("");
-    setPassword("");
-    navigation.goBack();
+    ).then(() => {
+      setUsername("");
+      setPassword("");
+      navigation.goBack();
+    });
   };
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ImageBackground
         source={{
           uri: "https://images.pexels.com/photos/2112648/pexels-photo-2112648.jpeg?auto=compress&cs=tinysrgb&w=600",

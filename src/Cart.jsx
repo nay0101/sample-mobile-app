@@ -1,4 +1,11 @@
-import { Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  StatusBar,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import main from "../styles/main";
 import { CartItems, Footer, NavBar } from "../components";
@@ -17,6 +24,7 @@ const Cart = ({ navigation }) => {
 
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <View style={main.container}>

@@ -2,6 +2,7 @@ import {
   Dimensions,
   ImageBackground,
   Pressable,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -23,23 +24,25 @@ const Register = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const formSubmitHandler = () => {
+  const formSubmitHandler = async () => {
     dispatch(
       register({
         username,
         password,
         email,
       })
-    );
-    setUsername("");
-    setPassword("");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    navigation.goBack();
+    ).then(() => {
+      setUsername("");
+      setPassword("");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      navigation.goBack();
+    });
   };
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ImageBackground
         source={{
           uri: "https://images.pexels.com/photos/2112648/pexels-photo-2112648.jpeg?auto=compress&cs=tinysrgb&w=600",

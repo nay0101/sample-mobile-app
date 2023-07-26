@@ -1,4 +1,4 @@
-import { ScrollView } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   NavBar,
@@ -13,6 +13,7 @@ import main from "../styles/main";
 const Home = () => {
   return (
     <SafeAreaView style={main.safeAreaView}>
+      <StatusBar />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <CarouselSection />
