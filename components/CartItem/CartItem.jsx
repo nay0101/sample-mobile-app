@@ -6,6 +6,7 @@ const CartItems = ({ item }) => {
     <View style={styles.container}>
       <View style={styles.itemDetail}>
         <Image source={{ uri: item.image }} style={styles.image} />
+
         <View>
           <Text style={styles.title}>
             <Text style={{ fontWeight: "bold" }}>Product: </Text>

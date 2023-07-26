@@ -52,7 +52,12 @@ const Product = ({ route, navigation }) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <View style={main.container}>
-          <Image source={{ uri: product.image }} style={styles.productImage} />
+          {product?.image && (
+            <Image
+              source={{ uri: product.image }}
+              style={styles.productImage}
+            />
+          )}
           <View style={styles.productInfo}>
             <Text style={styles.productTitle}>{product.title}</Text>
             <Text style={styles.productDescription}>{product.description}</Text>

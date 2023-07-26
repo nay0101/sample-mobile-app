@@ -24,7 +24,7 @@ const Products = ({ category }) => {
 
   return (
     <View style={[main.container, styles.container]}>
-      {products.map((product) => (
+      {products.map((product, index) => (
         <ProductCard key={product._id} image={product.image} id={product._id} />
       ))}
     </View>

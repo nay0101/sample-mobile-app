@@ -15,7 +15,14 @@
       }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "API_KEY": "https://seco-api.onrender.com/api",
+        "STRIPE_KEY": "pk_test_51NDUYXFBmrvMKHaef1ER7GgfijUTKcDNTGeM33y0ae516O3WGwGlXTwWXN1beZlEi3hOp4AwFxxy6EgayfiSX6Zh00NmkCynSK"
+      },
+      "android": {
+        "buildType": "apk"
+      }
     },
     "production": {
       "env": {
