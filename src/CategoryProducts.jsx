@@ -7,7 +7,7 @@ const CategoryProducts = ({ route }) => {
   const { category } = route.params;
   return (
     <SafeAreaView style={main.safeAreaView}>
-      <StatusBar />
+      <StatusBar barStyle={"default"} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <CategoryTitle title={category} />

@@ -27,7 +27,7 @@ const Orders = () => {
 
   return (
     <SafeAreaView style={main.safeAreaView}>
-      <StatusBar />
+      <StatusBar barStyle={"default"} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <View style={main.container}>

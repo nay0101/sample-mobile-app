@@ -13,7 +13,7 @@ import main from "../styles/main";
 const Home = () => {
   return (
     <SafeAreaView style={main.safeAreaView}>
-      <StatusBar />
+      <StatusBar barStyle={"default"} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <NavBar />
         <CarouselSection />

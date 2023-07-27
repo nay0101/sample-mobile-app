@@ -35,7 +35,7 @@ const Login = ({ navigation }) => {
   };
   return (
     <SafeAreaView style={main.safeAreaView}>
-      <StatusBar />
+      <StatusBar barStyle={"default"} />
       <ImageBackground
         source={{
           uri: "https://images.pexels.com/photos/2112648/pexels-photo-2112648.jpeg?auto=compress&cs=tinysrgb&w=600",

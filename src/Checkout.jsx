@@ -102,7 +102,7 @@ const Checkout = ({ navigation }) => {
 
   return (
     <SafeAreaView style={[main.safeAreaView, styles.container]}>
-      <StatusBar />
+      <StatusBar barStyle={"default"} />
       <Icon
         type="materialicons"
         name="arrow-back-ios"
